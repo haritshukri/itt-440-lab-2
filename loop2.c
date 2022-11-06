@@ -9,14 +9,14 @@ int main(void){
 		pid_t pid=fork();
 
 		if(pid == 0){
-			printf("child process => PPID=%d, PID=%d\n"' getppid(), getpid());
+			printf("Child process => PPID=%d, PID=%d\n", getppid(), getpid());
 			exit(0);
 		}
 		else{
 			printf("Parent process => PID%d\n", getpid());
 			printf("Waiting for child process to finish..\n");
 			wait(NULL);
-			print("child process finished. \n");
+			printf("child process finished. \n");
 		}
 	}
 return EXIT_SUCCESS;
